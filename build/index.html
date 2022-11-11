@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, initial-scale=1.0">
+	<meta name="description"
+				content="">
+	<meta name="keywords"
+				content="">
+	<link rel="shortcut icon"
+				href="img/favicon.svg"
+				type="image/svg+xml">
+	<link rel="shortcut icon"
+				href="img/favicon.webp"
+				type="image/webp">
+	<link rel="shortcut icon"
+				href="img/favicon.ico"
+				type="image/x-icon">
+	<link rel="stylesheet"
+				href="css/libs.min.css">
+				<link rel="stylesheet"
+				href="css/slick.css">
+	<link rel="stylesheet"
+				href="css/style.min.css">
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<title>DAMNN! so DOPE</title>
+</head>
+
+
+<body>
+	<style>
+
+    .preloader {
+        /*фиксированное позиционирование*/
+        position: fixed;
+        /* координаты положения */
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        /* фоновый цвет элемента */
+    
+        background: #F9691D;
+        /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+        z-index: 1001;
+    
+    
+      }
+      .preloader__header {
+        margin-bottom: 60px;
+    
+        }
+        .preloader__start-code {
+            margin-bottom: 8px;
+        }
+        .preloader__text, .preloader__load {
+            margin-left: 100px;
+            margin-bottom: 8px;
+        }
+      .preloader__bg {
+          
+          background: url(../img/bg/preload.webp);
+          position: absolute;
+          left: -1500px;
+          top: -1500px;
+          right: -1500px;
+          bottom: -1500px;
+          background-repeat: no-repeat;
+          z-index: 0;
+          background-size: contain;
+          overflow: hidden;
+          animation: headerLane 8s linear infinite alternate;
+      }
+      @keyframes headerLane {
+        0% {
+            transform: rotate(52.66deg);
+        }
+        20% {
+            transform: rotate(22.66deg);
+        }
+        40% {
+            transform: rotate(-12.61deg);
+        }
+        60% {
+    
+        }
+        80% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(12.61deg);
+        }
+    }
+      .preloader-wrapper {
+          z-index: 1002;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    
+      }
+      .preloader-main {
+            width: max-content;
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 120%;
+          }
+          @media (max-width: 500px) {
+            .preloader__bg {
+                background: url(../img/bg/preload-mobile.webp);
+                left: -250px;
+                top: -250px;
+                right: -250px;
+                bottom: -250px;
+                background-position: center center;
+                animation: headerLane 8s linear infinite alternate;
+            }
+            .preloader-main {
+                padding: 15px;
+                font-size: 15px;
+                line-height: 120%;
+            }
+            .preloader__header {
+                margin-bottom: 50px;
+            }
+            @keyframes headerLane {
+            0% {
+                transform: rotate(180deg);
+            }
+            20% {
+                transform: rotate(178.39deg);
+            }
+            40% {
+                transform: rotate(165.32deg);
+            }
+            60% {
+            }
+            80% {
+                transform: rotate(174deg);
+            }
+            100% {
+                transform: rotate(179deg);
+            }}
+          }
+    </style>
+    <script>
+    
+    
+        (function ($) {
+          
+            setTimeout(function() {
+            $('.preloader__header').text("C: \Damnn!\So dope > Content");
+            }, 500);
+            setTimeout(function() {
+                $('.preloader__start-code').text("<creative production>");
+            }, 1000);
+            setTimeout(function() {
+                $('.preloader__text').text(" //damnn! ");
+                $('.preloader__load-text').text("preparing. . . . . ");
+                $('.dws-progress-bar').text(" 10/100");
+                
+            }, 2450);
+            setTimeout(function() {
+                $('.dws-progress-bar').text(" 30/100");
+            }, 2850);
+            setTimeout(function() {
+                $('.dws-progress-bar').text(" 60/100");
+            }, 3650);
+            setTimeout(function() {
+                $('.preloader__end-code').text(" </creative production>");
+            }, 4000);
+            setTimeout(function() {
+                $('.dws-progress-bar').text(" 90/100");
+            }, 5050);
+            setTimeout(function() {
+                $('.dws-progress-bar').text(" 99/100");
+            }, 6050);
+            $(window).on('load', function() {
+              $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+            });
+        })(jQuery);
+    
+    
+    </script>
+    <div class="preloader" id="preloader">
+        <div class="preloader__bg"></div>
+        <div class="preloader-wrapper">
+            <div class="preloader-main">
+                <div class="preloader__header"></div>
+                <div class="preloader__start-code">
+                </div>
+                <div class="preloader__content">
+                    <div class="preloader__text">
+                       
+                    </div>
+                    <div class="preloader__load"><span class="preloader__load-text"></span><span class="dws-progress-bar" ></span></div>
+                </div>
+                <div class="preloader__end-code">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+	<div class="front-page">
+		<div class="front-page__block d-flex">
+			<div class="front-page__text">
+				<div class="brand">
+					<a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+					<h1 class="front-page__title">Creative production</h1>
+				</div>
+				<h2 class="front-page__subtitle">we help crypto teams <br> 
+					scale their marketing <br>
+					with a top-notch digital <br>
+					experience</h2>
+				<a class="modal-btn">start the project</a>
+				<h4 class="front-page__footer">damnn!ⓒ <span class="copy-year"></span> <a href="mailto:info@damnn.tv">info@damnn.tv</a></h4>
+			</div>
+			<div class="front-page__nav">
+				<ul class="nav-list">
+					<li class="nav-item"><a href="work.html" class="nav-link">work</a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link">about</a></li>
+					<li class="nav-item"><a href="service.html" class="nav-link">service</a></li>
+				</ul>
+				<a class="modal-btn">start the project</a>
+			</div>
+		</div>
+	</div>
+	<div class="modal-block">
+    <div class="modal-wrapper"></div>
+    <div class="modal-content">
+        <div class="modal-form">
+            <p class="temp">Calendly quiz form. it shouldn’t lead to caledly website, but should be opened right in the popup</p>
+        </div>
+        <div class="modal-close">
+            <img src="img/close.svg" alt="">
+            <span>close</span>
+        </div>
+    </div>
+</div>
+	<script src="js/slick.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
