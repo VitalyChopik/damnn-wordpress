@@ -1,0 +1,131 @@
+
+svg {
+  display: none;
+}
+
+.Cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  filter: url("#goo");
+  mix-blend-mode: difference;
+}
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fff;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 480px) {
+    .Cursor {
+        display: none;
+    }
+}
+.nav-list .menu-item a {
+    display: inline-block;
+    line-height: 100%;
+    height: 1em;
+    overflow: hidden;
+    .block {
+      margin: -2px 0;
+    }
+  }
+  .nav-list .menu-item a:hover .letter, .nav-list.play .letter {
+    transform: translateY(-100%);
+  }
+  .nav-list .block:last-child {
+    color: #F9691D;
+  }
+  .nav-list .letter {
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .letter:nth-child(1) {
+    transition-delay: 0s;
+  }
+  
+  .letter:nth-child(2) {
+    transition-delay: 0.03s;
+  }
+  
+  .letter:nth-child(3) {
+    transition-delay: 0.06s;
+  }
+  
+  .letter:nth-child(4) {
+    transition-delay: 0.09s;
+  }
+  
+  .letter:nth-child(5) {
+    transition-delay: 0.12s;
+  }
+  
+  .letter:nth-child(6) {
+    transition-delay: 0.15s;
+  }
+  
+  .letter:nth-child(7) {
+    transition-delay: 0.18s;
+  }
+  
+  .letter:nth-child(8) {
+    transition-delay: 0.21s;
+  }
+  
+  .letter:nth-child(9) {
+    transition-delay: 0.24s;
+  }
+  
+  .letter:nth-child(10) {
+    transition-delay: 0.27s;
+  }
+  
+  .letter:nth-child(11) {
+    transition-delay: 0.3s;
+  }
+  
+  .letter:nth-child(12) {
+    transition-delay: 0.33s;
+  }
+  
+  .letter:nth-child(13) {
+    transition-delay: 0.36s;
+  }
+  
+  .letter:nth-child(14) {
+    transition-delay: 0.39s;
+  }
+  
+  .letter:nth-child(15) {
+    transition-delay: 0.42s;
+  }
+  
+  .letter:nth-child(16) {
+    transition-delay: 0.45s;
+  }
+  
+  .letter:nth-child(17) {
+    transition-delay: 0.48s;
+  }
+  
+  .letter:nth-child(18) {
+    transition-delay: 0.51s;
+  }
+  
+  .letter:nth-child(19) {
+    transition-delay: 0.54s;
+  }
+  
+  .letter:nth-child(20) {
+    transition-delay: 0.57s;
+  }

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap');
+@mixin med-60 {
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 100%;
+}
+@mixin reg-30 {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 120%;
+}
+@mixin med-it-25 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 110%;
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    &::after {
+        content:"";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0%;
+        opacity: 0;
+        border-bottom: 1px solid #ffffff;
+        transition: all 0.3s ease-in;
+    }
+    // &:hover {
+    //     &::after {
+    //         width: 100%;
+    //         opacity: 1;
+    //     }
+    // }
+}
+.container {
+    max-width: 1920px;
+    padding: 0 51px 0 48px;
+    margin: 0 auto;
+}
+.d-flex {
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+}
+.page__title {
+ @include med-60;
+ span {
+    color: #F9691D;
+ }
+ margin-bottom: 30px;
+}
+.page__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 80px;
+    display: flex;
+}
+
+.wrapper {
+    margin-top: 100px;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+
+        aside.sidebar {
+            max-width: 300px;
+            width: 300px;
+            margin-bottom: 50px;
+            margin-right: 20px;
+            .sidebar-box {
+                position: sticky;
+                top: 225px;
+                width: max-content;
+            }
+            .nav-list {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                margin-bottom: 80px;
+
+                .menu-item {
+                    margin-bottom: 30px;
+                    a {
+                        font-size: 25px;
+                        line-height: 28px;
+                        &::after {
+                            opacity: 0 !important;
+                        }
+
+                    }
+                }
+            }
+            .modal-btn {
+                font-style: italic;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 28px;
+                text-transform: lowercase;
+                cursor: pointer;
+                &::after {
+                    opacity: 0 !important;
+                }
+            }
+        }
+        main.main {
+            max-width: 1480px;
+            width: 100%;
+            // overflow-x: hidden;
+        }
+    }
+}
+
+
+@media (max-width: 1365px) {
+    .container {
+        padding: 0 20px;
+    }
+    .wrapper__block aside.sidebar {
+        min-width: 250px;
+    }
+    .wrapper__block {
+        margin: 0 auto;
+    }
+    .wrapper__block main.main {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 990px) {
+    .container {
+         padding: 0 20px;
+    }
+    .wrapper {
+        margin-top: 20px;
+    }
+    .wrapper__block {
+        aside.sidebar{
+            display: none;
+            &.active {
+                position: fixed;
+                background: #0d0d0d;
+                top: 0px;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 9;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                max-width: 100%;
+                margin: 0;
+                overflow: hidden;
+                .nav-list {
+                    text-align: center;
+                    margin-bottom: 46px;
+                    .menu-item {
+                        margin-bottom: 20px;
+                        a {
+                            font-size: 20px;
+                            line-height: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
+                .modal-btn {
+                    font-style: italic;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    text-decoration-line: underline;
+                    text-transform: lowercase;
+                    &::after {
+                        opacity: 0 !important;
+                    }
+                }
+            }
+        }
+        main.main {
+            padding-top: 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+         padding: 0 12px;
+    }
+}

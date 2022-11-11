@@ -1,0 +1,143 @@
+.service {
+    .text__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 120px;
+    }
+    &__title {
+        margin-bottom: 0;
+    }
+    &__subtitle {
+        max-width: 542px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    &__block {
+        margin-bottom: 90px;
+    }
+    &__box {
+        display: flex;
+        align-items: center;
+        padding:53px 0;
+        border-bottom: 1px solid #FFFFFF;
+        position: relative;
+        -moz-transition: all 1s ease-in-out; /* эффект перехода для Firefox до версии 16.0 */
+        -webkit-transition: all 1s ease-in-out; /* эффект перехода для Chrome до версии 26.0, Safari, Android и iOS */
+        -o-transition: all 1s ease-in-out; /* эффект перехода для Opera до версии 12.10 */
+        transition: all 1s ease-in-out; /* эффект перехода для других браузеров */
+        span.number {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            color: #026169;
+            margin-right: 18px;
+        }
+        h2 {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 70px;
+            margin-right: 20px;
+        }
+        .img-hover {
+            position: absolute;
+            width: auto;
+            height: calc(100% + 20px);
+            top: -10px;
+            bottom: -10px;
+            left: 350px;
+            -moz-transition: all 1s ease-in-out; /* эффект перехода для Firefox до версии 16.0 */
+            -webkit-transition: all 1s ease-in-out; /* эффект перехода для Chrome до версии 26.0, Safari, Android и iOS */
+            -o-transition: all 1s ease-in-out; /* эффект перехода для Opera до версии 12.10 */
+            transition: all 1s ease-in-out; /* эффект перехода для других браузеров */
+            opacity: 0;
+            transform: scale(0);
+        }
+        .box-text {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 542px;
+            width: 100%;
+            margin: -14px 0;
+            margin-left: auto;
+            span {
+                min-width: 235px;
+                font-style: italic;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 100%;
+                opacity: 0.4;
+                margin: 14px 0;
+            }
+        }
+        &:hover {
+            -moz-transition: all 1s ease-in-out; /* эффект перехода для Firefox до версии 16.0 */
+            -webkit-transition: all 1s ease-in-out; /* эффект перехода для Chrome до версии 26.0, Safari, Android и iOS */
+            -o-transition: all 1s ease-in-out; /* эффект перехода для Opera до версии 12.10 */
+            transition: all 1s ease-in-out; /* эффект перехода для других браузеров */
+            
+            .img-hover {
+                transform: scale(1);
+                -moz-transition: all 1s ease-in-out; /* эффект перехода для Firefox до версии 16.0 */
+                -webkit-transition: all 1s ease-in-out; /* эффект перехода для Chrome до версии 26.0, Safari, Android и iOS */
+                -o-transition: all 1s ease-in-out; /* эффект перехода для Opera до версии 12.10 */
+                transition: all 1s ease-in-out; /* эффект перехода для других браузеров */
+                opacity: 1;
+
+
+            }
+        }
+    }
+}
+@media (max-width:990px) {
+    .service .text__title {
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 90px;
+        .service__title {
+            margin-bottom: 30px;
+        }
+    }
+}
+@media (max-width:768px) {
+    .page__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 100%;
+        br {display: none;}
+        margin-bottom: 25px;
+    }
+    .page__subtitle {
+        margin-bottom: 60px;
+        font-size: 15px;
+        line-height: 140%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+    .service__box {
+        flex-wrap: wrap;
+        padding: 32px 0;
+        .span.number {
+            font-size: 15px;
+            line-height: 100%;
+            margin-right: 20px;
+        }
+        h2 {
+            font-size: 30px;
+            line-height: 70px;
+        }
+        .box-text {
+            margin: 0 0 0 44px;
+            span {
+                font-size: 15px;
+                line-height: 120%;
+                margin: 12px 0;
+            }
+        }
+    }
+}

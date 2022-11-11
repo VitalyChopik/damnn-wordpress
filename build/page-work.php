@@ -24,7 +24,7 @@
 								while ( $query->have_posts() ) {
 									$query->the_post();
 									
-									$cnt++; // если пост есть, увеличиваем на 1 
+									$cnt++; // если пост есть, увеличиваем на 1   
 									switch($cnt) {
 										case '3': case '6': case '9': case '12': case '15': case '18': case '21':
 									?>

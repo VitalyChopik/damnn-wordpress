@@ -1,0 +1,206 @@
+.front-page {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    &__block {
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    &__text {
+        position: relative;
+        max-width: 40%;
+        width: 100%;
+        background: url(../img/bg/front-page__bg-orange.webp);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px 30px 30px 40px;
+        z-index: 1;
+        .brand {
+            max-width: 340px;
+
+            a {
+                margin-bottom: 15px;
+                &::after {
+                    opacity: 0;
+                }
+                img {
+                    height: auto;
+                }
+            }
+            .lottie-logo {
+                margin-left: -30px;
+                margin-bottom: -20px;
+            }
+        }
+        .modal-btn {
+            display: none;
+            cursor: pointer;
+        }
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 17.5162px;
+        line-height: 35px;
+    }
+    &__subtitle{
+        font-style: italic;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 110%;
+        max-width: 330px;
+        margin-top: 50px;
+    }
+    &__footer {
+        position: absolute; 
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        padding: 30px 30px 30px 40px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        opacity: 0.5;
+        a {
+            margin-left: auto;
+        }
+    }
+    &__nav {
+        z-index: 0;
+        margin-left: -5px;
+        background: url(../img/bg/front-page__bg.webp);
+        max-width: 61%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        padding: 54px;
+        
+        .nav-list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: right;
+            margin-bottom: 64px;
+            .menu-item {
+                margin-bottom: 30px;
+                a {
+                    font-size: 25px;
+                    line-height: 28px;
+                    &::after {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        .modal-btn {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 28px;
+            text-transform: lowercase;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    .front-page__text {
+        padding: 20px;
+    }
+    .front-page__footer {
+        padding: 20px;
+        font-size: 13px;
+        line-height: 28px;
+    }
+}
+@media (max-width: 600px) {
+    .front-page__block {
+        flex-wrap: wrap;
+    }
+    .front-page__nav {
+        max-width: 100%;
+        margin: 0;
+        align-items:start;
+        padding: 12px;
+
+        height: 56.34%;
+        .nav-list {
+            text-align: left;
+            margin: 0;
+            margin-top: 130px;
+            .menu-item {
+                margin-bottom: 20px;
+                a {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+        .modal-btn {
+            display: none;
+        }
+    }
+    .front-page__text {
+        position: static;
+        padding: 12px;
+        padding-top: 20px;
+        max-width: 100%;
+        order: 2;
+        justify-content: start;
+        height: 43.66%;
+        .brand {
+            position: absolute;
+            top: 36px; 
+            a {
+
+                margin-bottom: 2px;
+                img {
+                    max-width: 156px;
+                }
+            }
+
+        }
+       
+        .modal-btn {
+            display: block;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            text-decoration-line: underline;
+            text-transform: lowercase;
+            color: #FFFFFF;
+        }
+    }
+    .front-page__title {
+        font-size: 10px;
+        line-height: 26px;
+    }
+    .front-page__subtitle {
+        font-size: 18px;
+        line-height: 110%;
+        margin-bottom: 30px;
+    }
+    .front-page__footer {
+        padding: 12px;
+        padding-bottom: 38px;
+    }
+}
