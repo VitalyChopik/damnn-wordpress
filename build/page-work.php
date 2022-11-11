@@ -62,7 +62,14 @@
 															.work-style-<?php echo $cnt ?> <?php the_sub_field('style_input')?>
 														<?php endwhile; ?>
 													<?php endif; ?>
-													
+													@media (max-width: 768px) {
+														<?php if( have_rows('style-mobile') ): ?>
+														<?php while( have_rows('style-mobile') ): the_row(); 
+															?>
+															.work-style-<?php echo $cnt ?> <?php the_sub_field('style_input')?>
+														<?php endwhile; ?>
+													<?php endif; ?>
+													}
 												</style>
 												<div class="box-tags">
 													<?php
@@ -115,6 +122,14 @@
 															.work-style-<?php echo $cnt ?> <?php the_sub_field('style_input')?>
 														<?php endwhile; ?>
 													<?php endif; ?>
+													@media (max-width: 768px) {
+														<?php if( have_rows('style-mobile') ): ?>
+														<?php while( have_rows('style-mobile') ): the_row(); 
+															?>
+															.work-style-<?php echo $cnt ?> <?php the_sub_field('style_input')?>
+														<?php endwhile; ?>
+													<?php endif; ?>
+													}
 												</style>
 												<div class="box-tags">
 													<?php
