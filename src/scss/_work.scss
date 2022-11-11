@@ -126,7 +126,8 @@
                     }
                 }
                 .work__box-hover {
-                    display: none;
+                    display: flex;
+                    opacity: 1;
                 }
             }
         }
@@ -136,3 +137,10 @@
     }
 }
 
+@media (max-width:768px) {
+    .work__block .work__box .cases__box .box-tags a.tag {
+        font-weight: 300;
+font-size: 11px;
+line-height: 100%;
+    }
+}
