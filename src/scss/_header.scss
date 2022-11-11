@@ -1,0 +1,114 @@
+header {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    width: max-content;
+    .d-none {
+        display: none !important;
+    }
+    .brand {
+       max-width: 220px; 
+       height: 100%;
+       background: #0D0D0D;
+       position: relative;
+
+       a {
+        height: 100%;
+        img {
+            max-height: 100%;
+        }
+       }
+    }
+    padding: 30px 0 30px;
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 57px;
+        .back {
+            display: none;
+            align-items: center;
+            img {
+                margin-right: 12px;
+            }
+            span {
+                font-size: 18px;
+                line-height: 140%;
+                color: #FFFFFF;
+            }
+            margin-bottom: 0 !important;
+        }
+    }
+    .hamburger {
+        display: none;
+        width: 25px;
+        position: relative;
+        height: 9px;
+        cursor: pointer;
+        .line {
+            background: #ffffff;
+            position: absolute;
+            width: 100%;
+            height: 2px;
+        }
+        .line1 {
+            top: 0;
+        }
+        .line2 {
+            bottom: 0;
+        }
+        &.active {
+            margin-top: 6px;
+            .line1 {
+                transform: rotate(45deg);
+                bottom: 0;;
+            }
+            .line2 {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 990px) {
+    header {
+        background: #0d0d0d;
+        width: 100%;
+        position: relative;
+        .brand {
+            display: none;
+            &.open {
+                display: block;
+            }
+        }
+        .navbar {
+            .back {
+                display: flex;
+            }
+        }
+        .hamburger {
+            display: block;
+        }
+        &.active {
+            .navbar {
+                .back {
+                    display: none;
+                }
+            }
+        }
+    }
+    header.header.active {
+        &::before {
+            content: none;
+        }
+        .brand {
+            &::before {
+                content: none;
+            }
+        }
+    }
+}
