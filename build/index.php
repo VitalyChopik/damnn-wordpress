@@ -21,9 +21,40 @@
                     <?php the_content();?>
                 </h2>
 				<a class="modal-btn" href="start-the-project/">start the project</a>
-				<h4 class="front-page__footer">damnn!ⓒ <span class="copy-year"></span> <a href="mailto:<?php the_field('page-email', 'option')?>"><?php the_field('page-email', 'option')?></a></h4>
 			</div>
 			<div class="front-page__nav">
+                    <?php if( have_rows('doge') ): ?>
+                        <div class="front-page__doge">
+                            <?php while( have_rows('doge') ): the_row(); ?>
+                            <?php $image = get_sub_field('image');?>
+                                <?php if(get_sub_field('image')){
+                                            ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                                <?php } ?>
+                        <p class="text"><?php the_sub_field('text')?></p>
+                        <?php endwhile; ?>
+                        </div>
+                    <?php endif; ?>
+                     <?php if( have_rows('background') ): ?>
+                        <div class="front-page__bg">
+                            <?php while( have_rows('background') ): the_row(); ?>
+                                    <?php $video = get_sub_field('video_background');?>
+                                    <?php $video__image = get_sub_field('post_background');?>
+                                    <?php $image = get_sub_field('image_background');?>
+                                    <?php if(get_sub_field('video_background')){
+                                    ?>
+                                        <video src="<?php echo $video['url']; ?>" poster="<?php echo $video__image['url']; ?>" autoplay loop muted></video>
+                                        <?php
+                                    }?>
+                                        <?php if(get_sub_field('image_background')){
+                                    ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                                        <?php
+                                    }?>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php endif; ?>
+                    
                     <?php wp_nav_menu( [
                         'theme_location'  => 'header_menu',
                         'container'       => 'ul', 
@@ -38,16 +69,5 @@
 			</div>
 		</div>
 	</div>
-	<!-- <div class="modal-block">
-    <div class="modal-wrapper"></div>
-    <div class="modal-content">
-        <div class="modal-form">
-            <p class="temp">Calendly quiz form. it shouldn’t lead to caledly website, but should be opened right in the popup</p>
-        </div>
-        <div class="modal-close">
-            <img src="img/close.svg" alt="">
-            <span>close</span>
-        </div>
-    </div> -->
 </div>
 <?php get_footer();?>
