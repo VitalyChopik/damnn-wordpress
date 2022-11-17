@@ -117,8 +117,11 @@ img {
         }
     }
 }
-
-
+@media (max-width: 1536px) {
+    .wrapper__block main.main {
+        max-width: 1190px;
+    }
+}
 @media (max-width: 1365px) {
     .container {
         padding: 0 20px;
@@ -135,6 +138,7 @@ img {
 }
 
 @media (max-width: 990px) {
+    
     .container {
          padding: 0 20px;
     }
@@ -187,6 +191,7 @@ img {
         }
         main.main {
             padding-top: 0;
+            max-width: 100%;
         }
     }
 }

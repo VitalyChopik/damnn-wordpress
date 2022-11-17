@@ -227,6 +227,7 @@
         .team__block {
             margin: 0 -15px;
             justify-content: start;
+            flex-wrap: wrap;
             .section__title {
                 margin-left: 15px;
                 margin-bottom: 50px;
@@ -300,9 +301,6 @@
                 margin-bottom: -100px;   
             }
         }
-    }
-    .wrapper__block main.main {
-        max-width: 100% !important;
     }
 }
 
