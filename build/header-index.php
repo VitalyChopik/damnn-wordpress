@@ -85,10 +85,10 @@
         color: #ffffff;
         font-size: 18px;
         opacity: 0.5;
+        margin-bottom: 18px;
       }
       .preloader__footer .load{
-        background: #FFFFFF;
-        opacity: 0.2;
+        background: rgb(100%, 100%, 100%, 0.2);
         border-radius: 35px;
         max-width:606px;
         width: 100%;
@@ -98,6 +98,7 @@
         background: #FFFFFF;
         border-radius: 35px;
         height: 4px;
+        max-width: 100%;
         }
       .preloader__logo {
         padding: 20px;
@@ -865,6 +866,7 @@
                 var Width = 99 - currval;
                 var loadscreen = document.getElementById("loader-progress");
                 loader.innerHTML = ++currval;
+                WidthProgres = loader;
                 if (currval > 89){
                     loader.innerHTML = 90;
                     if(window.jQuery) {
@@ -886,14 +888,14 @@
                 } 
                 
                 loadscreen.style.transition = "0.15s";
-                loadscreen.style.width = Width + "%";
+                loadscreen.style.width = currval + 10 + "%";
             }, 20);
         </script>
         <script>
         (function ($) {
             // $('body').addClass('');
             $(window).on('load', function() {
-                 $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
+                  $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
                  $('.front-page').removeClass('hide');
             });
         })(jQuery);
@@ -930,11 +932,10 @@
                 <span>
                     Coming soon
                 </span> -->
-                <span class="procent"><span id="percentage">10</span>%</span>
-                <div class="loader-progress" id="loader-progress"> </div>
+                <span class="procent"><span id="percentage">1</span>%</span>
                 <div class="load">
                
-                    <div class="load__active"></div>
+                    <div class="load__active" id="loader-progress"><span></span></div>
                 </div>
             </div>
         </div>
