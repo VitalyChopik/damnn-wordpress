@@ -68,25 +68,37 @@
         transform: translate(-50%, -50%);
       }
       .preloader__footer{
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-style: italic;
-        color: #ffffff;
-        font-size: 18px;
+
         position: absolute;
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        opacity: 0.5;
-        padding: 1rem;
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
+        flex-direction:column;
       }
-      .preloader__footer img {
-        margin: 0 80px;
+      .preloader__footer .procent {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #ffffff;
+        font-size: 18px;
+        opacity: 0.5;
       }
+      .preloader__footer .load{
+        background: #FFFFFF;
+        opacity: 0.2;
+        border-radius: 35px;
+        max-width:606px;
+        width: 100%;
+        height: 4px;
+      }
+      .preloader__footer .load .load__active{
+        background: #FFFFFF;
+        border-radius: 35px;
+        height: 4px;
+        }
       .preloader__logo {
         padding: 20px;
         max-width: 1600px;
@@ -847,11 +859,42 @@
     </script>
         <?php wp_head();?>
         <script>
+            var counting = setInterval(function () {
+                var loader = document.getElementById("percentage");
+                var currval = parseInt(loader.innerHTML);
+                var Width = 99 - currval;
+                var loadscreen = document.getElementById("loader-progress");
+                loader.innerHTML = ++currval;
+                if (currval > 89){
+                    loader.innerHTML = 90;
+                    if(window.jQuery) {
+                        //console.log('jquery loaded');
+                        loader.innerHTML = 95;
+                        if(document.readyState == "interactive") {
+                            loader.innerHTML = 99;
+                        }
+                        if(document.readyState == "complete") {
+                            //console.log('fully loaded!');
+                            clearInterval(counting);
+                            loader.innerHTML = 100;
+                            jQuery("body").toggleClass('page-loaded');
+                            setTimeout(function() {
+                                jQuery('nav').css('visibility','visible')
+                            }, 880);
+                        }
+                    }
+                } 
+                
+                loadscreen.style.transition = "0.15s";
+                loadscreen.style.width = Width + "%";
+            }, 20);
+        </script>
+        <script>
         (function ($) {
             // $('body').addClass('');
             $(window).on('load', function() {
                  $('.preloader').fadeOut().end().delay(400).fadeOut('slow');
-                $('.front-page').removeClass('hide');
+                 $('.front-page').removeClass('hide');
             });
         })(jQuery);
     </script>
@@ -880,13 +923,19 @@
                 </lottie-player>
             </div>
             <div class="preloader__footer">
-                <span>
+                <!-- <span>
                     Creative production
                 </span>
-                <img src="<?php echo get_template_directory_uri()?>/img/icon/star.svg" alt="">
+                <img src=" echo get_template_directory_uri()?>/img/icon/star.svg" alt="">
                 <span>
                     Coming soon
-                </span>
+                </span> -->
+                <span class="procent"><span id="percentage">10</span>%</span>
+                <div class="loader-progress" id="loader-progress"> </div>
+                <div class="load">
+               
+                    <div class="load__active"></div>
+                </div>
             </div>
         </div>
     </div>
