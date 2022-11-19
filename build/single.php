@@ -14,15 +14,25 @@
                             <?php 
                             $image = get_sub_field('image');
                             $video = get_sub_field('video');
+                            $image_mobile = get_sub_field('image_mobile');
+                            $video_mobile = get_sub_field('video_mobile');
                             $video__image = get_sub_field('poster_video');
+                            $video__image_mobile = get_sub_field('poster_video_mobile');
+
                             if ( $image ) { ?>
                                 <div class="media__block">
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="desktop-js"/>
+                                <?php }
+                                if ( $image_mobile ) { ?>
+                                    <img src="<?php echo $image_mobile['url']; ?>" alt="<?php echo $image_mobile['alt']; ?>"class="mobile-js" />
                                 </div>
                             <?php } ?>
                             <?php if ( $video ) { ?>
                                 <div class="media__block">
-                                    <video src="<?php echo $video['url']; ?>" poster="<?php echo $video__image['url']; ?>" autoplay loop muted></video>
+                                <video src="<?php echo $video['url']; ?>" poster="<?php echo $video__image['url']; ?>" autoplay loop muted class="desktop-js"></video>
+                                <?php if ( $video_mobile ) { ?>
+                                    <video src="<?php echo $video_mobile['url']; ?>" poster="<?php echo $video__image_mobile['url']; ?>" autoplay loop muted class="mobile-js"></video>
+                                <?php } ?>
                                 </div>
                             <?php } ?>
                         <?php endwhile; ?>

@@ -925,13 +925,6 @@
                 </lottie-player>
             </div>
             <div class="preloader__footer">
-                <!-- <span>
-                    Creative production
-                </span>
-                <img src=" echo get_template_directory_uri()?>/img/icon/star.svg" alt="">
-                <span>
-                    Coming soon
-                </span> -->
                 <span class="procent"><span id="percentage">1</span>%</span>
                 <div class="load">
                
