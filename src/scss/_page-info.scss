@@ -1,0 +1,114 @@
+.page-info {
+    padding-bottom: 150px;
+    &__title {
+        color: #F9691D;
+        margin-bottom: 60px;
+    }
+    .content {
+        h2 {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 28px;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            margin-top: 60px;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                max-width: 370px;
+                height: 1px;
+                background: linear-gradient(90deg, #FFFFFF 20.69%, rgba(255, 255, 255, 0) 104.02%);
+            }
+        }
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            margin-bottom: 20px;
+        }
+        ol {
+            list-style-type: none; 
+            counter-reset: num;
+            padding: 0;margin: 0;
+            li {
+                position: relative;
+                padding-left: 46px;
+                &::before {
+                    content: counter(num) '/'; 
+                    counter-increment: num;
+                    display: inline-block;	
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 20px;    
+                    color: #026169;
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 100%;
+                }
+            }
+        }
+        li {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            margin-bottom: 20px;
+
+            strong {
+                // margin-bottom: 20px;
+                font-size: 25px;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .page-info {
+        padding-bottom: 70px;
+        &__title {
+            margin-bottom: 30px;
+        }
+        .content {
+            h2 {
+                font-size: 16px;
+                line-height: 28px;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 120%;
+                margin-bottom: 15px;
+            }
+            ol {
+                margin-bottom: 10px;
+                li {
+                    padding-left: 34px;
+                    &::before {
+                        font-size: 13px;
+                        line-height: 100%;
+                    }
+                }
+            }
+            li {
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 120%;
+                margin-bottom: 15px;
+                strong {
+                    font-weight: 300;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
