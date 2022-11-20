@@ -75,6 +75,9 @@
                                     <div class="solution__block">
                                     <?php while( have_rows('solution__block') ): the_row(); ?>
                                     <div class="solution__box">
+                                        <div class="text">
+                                            <?php the_sub_field('text');?>
+                                        </div>
                                         <div class="media">
                                             <?php 
                                             $image = get_sub_field('image');
@@ -95,9 +98,6 @@
                                             <?php if ( $video_mobile ) { ?>
                                                 <video src="<?php echo $video_mobile['url']; ?>" poster="<?php echo $video__image_mobile['url']; ?>" autoplay loop muted class="mobile-js"></video>
                                             <?php } ?>
-                                        </div>
-                                        <div class="text">
-                                            <?php the_sub_field('text');?>
                                         </div>
                                     </div>
                                     <?php endwhile; ?>

@@ -169,6 +169,7 @@
                     margin-left: auto;
                     color: #FFFFFF;
                     opacity: 0.9;
+                    margin-bottom: 50px;
                     h1, h2, h3, h4, h5, h6, ul, li, ol, p {
                         margin-bottom: 30px;
                     }
@@ -398,5 +399,9 @@
     .single .block-info .box .info__title {
         font-size: 16px;
         line-height: 28px;
+    }
+    .single .team .img h3 {
+        font-size: 16px;
+        line-height: 110%;
     }
 }

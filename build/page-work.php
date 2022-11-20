@@ -81,7 +81,7 @@
 													}
 													?>
 												</div>
-												<a href="#" class="case__title"><?php the_field('post_title')?></a>
+												<a href="<?php the_permalink()?>" class="case__title"><?php the_field('post_title')?></a>
 											</div>
 										</div>
 									<?php 
@@ -141,7 +141,7 @@
 													}
 													?>
 												</div>
-												<a href="#" class="case__title"><?php the_field('post_title')?></a>
+												<a href="<?php the_permalink()?>" class="case__title"><?php the_field('post_title')?></a>
 											</div>
 										</div>
 									<?php
