@@ -476,4 +476,14 @@
     .about .team__block .tab-content__item.active .box .careers__box {
         padding: 20px;
     }
+    .about .team__block .tab-content__item.active .text .name {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .about .team__block .tab-content__item.active .text .position {
+        font-size: 14px;
+        line-height: 110%;
+        max-width: 186px;
+    }
 }

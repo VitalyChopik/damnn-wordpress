@@ -20,8 +20,8 @@ if (is_front_page()){
                         <a href="<?php the_field('artstation_link', 'option')?>">artstation</a>
                     </div>
                     <div class="nav-box">
-                        <a href="policy">privacy policy</a>
-                        <a href="terms">terms of service</a>
+                        <a href="<?php echo site_url()?>/policy">privacy policy</a>
+                        <a href="<?php echo site_url()?>/terms">terms of service</a>
                     </div>
                 </div>
             </div>

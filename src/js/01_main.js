@@ -28,12 +28,14 @@ jsTriggers.forEach(function(trigger) {
           $(".header .brand").removeClass('open');
           $(".modal-btn").removeClass('d-none');
           $(".header").removeClass('active');
+          $("body").removeClass('lock');
           $(".wrapper__block aside.sidebar").removeClass('active');
       } else {
           $(".hamburger").addClass('active');
           $(".header .brand").addClass('open');
           $(".modal-btn").addClass('d-none');
           $(".header").addClass('active');
+          $("body").addClass('lock');
           $(".wrapper__block aside.sidebar").addClass('active');
       }
   }); 
