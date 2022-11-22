@@ -39,13 +39,7 @@ jsTriggers.forEach(function(trigger) {
           $(".wrapper__block aside.sidebar").addClass('active');
       }
   }); 
-    $('.topup').on('click', function(e) {
-		e.preventDefault()
-		$("body,html").animate({
-				scrollTop:0
-			}, 800);
-			return false;
-	})
+
 	window.addEventListener( "scroll" , function() {
     document.querySelector(".topup").classList.toggle("active", this.pageYOffset > 170);
   });

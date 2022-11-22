@@ -83,9 +83,7 @@ footer.footer {
         }
     }
 }
-.topup {
-    display: none;
-}
+
 
 .modal-block {
     display: none;
@@ -180,26 +178,6 @@ footer.footer {
         font-weight: 400;
         font-size: 18px;
         line-height: 55px;
-    }
-    .topup {
-        display: none;
-        position: fixed;
-        right: 20px;
-        top: 350px;
-        width: 45px;
-        height: 45px;
-        z-index: 2;
-        opacity: 0;
-        transition: 1s ease-in all;
-        &::after {
-            opacity: 0;
-            border-bottom: 0;
-        }
-        &.active {
-            display: block;
-            opacity: 1;
-        }
-        
     }
     .modal-block.active .modal-content {
         position: static;
