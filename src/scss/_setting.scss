@@ -195,6 +195,9 @@ img {
             max-width: 100%;
         }
     }
+    .page header .navbar .back {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 600px) {

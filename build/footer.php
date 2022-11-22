@@ -60,22 +60,25 @@ if (is_front_page()){
     <div class="t123">
 
     <script>
-        let elements = document.querySelectorAll('.nav-list .menu-item a');
-        elements.forEach(element => {
-        let innerText = element.innerText;
-        element.innerHTML = '';
-        let textContainer = document.createElement('div');
-        textContainer.classList.add('block');
+        if (document.documentElement.clientWidth > 990) {
+            let elements = document.querySelectorAll('.nav-list .menu-item a');
+            elements.forEach(element => {
+            let innerText = element.innerText;
+            element.innerHTML = '';
+            let textContainer = document.createElement('div');
+            textContainer.classList.add('block');
 
-        for (let letter of innerText) {
-            let span = document.createElement('span');
-            span.innerText = letter.trim() === '' ? '\xa0': letter;
-            span.classList.add('letter');
-            textContainer.appendChild(span);
+            for (let letter of innerText) {
+                let span = document.createElement('span');
+                span.innerText = letter.trim() === '' ? '\xa0': letter;
+                span.classList.add('letter');
+                textContainer.appendChild(span);
+            }
+            element.appendChild(textContainer);
+            element.appendChild(textContainer.cloneNode(true));
+            });
         }
-        element.appendChild(textContainer);
-        element.appendChild(textContainer.cloneNode(true));
-        });
+
     </script>
     </div>
     </body>
